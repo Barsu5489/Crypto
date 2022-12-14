@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+
+}
+/* Coins table */
+.cotainer{
+    max-width: 1024px;
+    margin: auto;
+}
+.header,.c-row{
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    margin: 32px 16px;
+    padding: 12px 8px;
+    align-items: center;
+}
+img{
+    height: 40px;
+}
+.p{
+    margin-left: -3rem;
+}
