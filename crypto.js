@@ -90,9 +90,46 @@ function coinDetails(coinId)
             console.log(data)
         },[])
 }
+
 // function renderDetails(data)
 // {
-//     if
+//     const detailContainer =  document.querySelector('.coin-container')
+//     const content = Object.assign(document.createElement('div'), {
+//       className: 'content',
+//     })
+//     detailContainer.appendChild(content)
+//     content.append(
+//       Object.assign(document.createElement('h1'),
+//       {
+//         textContent: data.id
+//       })
+//     )
+//     detailContainer.append(
+//       Object.assign(document.createElement('div'),
+//       {
+//         className:rank
+//       }).append(
+//         Object.assign(document.createElement('span'),
+//         {
+//           className: rank-btn,
+//           textContent: data.rank
+//         })
+//       )
+
+//     )
+//     /*
+   
+//             <div class="info">
+//                 <img src="" alt="">
+//                 <p>coin name</p>
+//                 <p>coin symbol</p>
+                
+//             </div>
+//             <div class="coinprice">
+//                 <h1> current price</h1>
+//             </div>
+//         </div>
+//     */
 // }
 document.addEventListener('DOMContentLoaded', ()=>
 {

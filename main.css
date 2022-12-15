@@ -2,7 +2,7 @@
     box-sizing: border-box;
 
 }
-/* Coins table */
+/* All Coins table */
 .cotainer{
     max-width: 1024px;
     margin: auto;
@@ -20,4 +20,13 @@ img{
 }
 .p{
     margin-left: -3rem;
+}
+/* Specific coin */
+.coin-container .content{
+    display: flex;
+    /* flex-direction: column; */
+}
+.stats .row{
+    display: flex;
+    /* justify-content: space-between; */
 }
