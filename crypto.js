@@ -87,50 +87,79 @@ function coinDetails(coinId)
     .then(res=>res.json())
     .then(data=>
         {
-            console.log(data)
+            renderDetails(data)
+
         },[])
 }
 
-// function renderDetails(data)
-// {
-//     const detailContainer =  document.querySelector('.coin-container')
-//     const content = Object.assign(document.createElement('div'), {
-//       className: 'content',
-//     })
-//     detailContainer.appendChild(content)
-//     content.append(
-//       Object.assign(document.createElement('h1'),
-//       {
-//         textContent: data.id
-//       })
-//     )
-//     detailContainer.append(
-//       Object.assign(document.createElement('div'),
-//       {
-//         className:rank
-//       }).append(
-//         Object.assign(document.createElement('span'),
-//         {
-//           className: rank-btn,
-//           textContent: data.rank
-//         })
-//       )
+function renderDetails(data)
+{
+    const detailContainer =  document.querySelector('.coin-container')
+    const content = Object.assign(document.createElement('div'), {
+      className: 'content',
+    })
+    detailContainer.appendChild(content)
+    content.append(
+      Object.assign(document.createElement('h1'),
+      {
+        textContent: data.id
+      })
+    )
+    const content2 = Object.assign(document.createElement('div'),
+    {
+      className: 'content'
+    })
+    detailContainer.appendChild(content2)
+     const rankDiv =  Object.assign(document.createElement('div'),
+      {
+        className:'rank'
+      })
+      content2.appendChild(rankDiv)
+      const rankData = Object.assign(document.createElement('span'),
+        {
+          className: 'rank-btn',
+          textContent: data.market_cap_rank
+        })
+        rankDiv.appendChild(rankData)
+      const infoDiv = Object.assign(document.createElement('div'),
+      {
+        className: 'info'
+      })
+      content2.appendChild(infoDiv)
+      // const imdContent = Object.assign(document.createElement('img'),
+      //   {
+      //     src: `${data.image}`
+      //   })
+       const coinName =  Object.assign(document.createElement('p'),
+        {
+          textContent: data.name
+        })
+        const coinSymbool = Object.assign(document.createElement('p'),
+        {
+          textContent: data.symbol
+        })
+        infoDiv.appendChild(imdContent)
+        infoDiv.appendChild(coinName)
+        infoDiv.appendChild(coinSymbool)
+        //infoDiv.appendChild()
+      
+      
 
-//     )
-//     /*
+    
+    /*
    
-//             <div class="info">
-//                 <img src="" alt="">
-//                 <p>coin name</p>
-//                 <p>coin symbol</p>
+            <div class="info">
+                <img src="" alt="">
+                <p>coin name</p>
+                <p>coin symbol</p>
                 
-//             </div>
-//             <div class="coinprice">
-//                 <h1> current price</h1>
-//             </div>
-//         </div>
-//     */
-// }
+            </div>
+            <div class="coinprice">
+                <h1> current price</h1>
+            </div>
+        </div>
+    */
+}
 document.addEventListener('DOMContentLoaded', ()=>
 {
     fetchCoins();
