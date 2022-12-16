@@ -8,8 +8,54 @@
     <title>Document</title>
 </head>
 <body id="body">
+
     <button id="btn"> x</button>
+  <input
+   type="text"
+    value=""
+    id="searchBar"
+    placeholder="Search for coin"
+    >
+    <div class="container" id="body">
+    
+    <template coin-template class="row-header">
+        <div>
+       
+                <div class="header" head-row>
+                    <p class="prank">#</p>
+                    <p class="pcoin">coin</p>
+                    <p class="pprice">price</p>
+                    <p class="ptime">time</p>
+                    <p class="pvolume">Volume</p>
+                    <p class="pcap">Market cap</p>
+                </div>
+            </div>
+            </template>
+        <div id="appendKids" >
+            <template kids>
+                <div>
+            <div class="c-row"> 
+                <p class="p0">${coin.market_cap_rank}</p>
+           
+                <div class="imgDiv">
+                    <img src="${coin.image}" alt="" srcset="" id="coinIcon">
+                    <p class="p-p">${coin.symbol}</p>
+                    
+                </div>
+                  <p class="p1">${coin.current_price}</p>
+                    <p class="p2">${coin.price_change_24h}</p>
+                    <p class="p3"> ${coin.total_volume}</p>
+                    <p class="p4">${coin.market_cap}</p>
+             </div>
+            </div>
+            </template>
+           
+        </div>
+    </div>
+  <div style="display: none;" id="show">
     <div class="coin-container">
+     
+      
         <!-- <div class="content">
             <h1>coin name</h1>
         </div>
@@ -82,6 +128,7 @@
             <h3>About</h3>
             <p>description</p>
         </div>
+    </div>
     </div>
 <!-- <div class="container">
 
