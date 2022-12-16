@@ -126,10 +126,13 @@ function renderDetails(data)
         className: 'info'
       })
       content2.appendChild(infoDiv)
-      // const imdContent = Object.assign(document.createElement('img'),
-      //   {
-      //     src: `${data.image}`
-      //   })
+      //const urlImg = JSON.stringify(data.image)
+      const imdContent = Object.assign(document.createElement('img'),
+        {
+          
+          src: 'https://cdn-icons-png.flaticon.com/128/5448/5448163.png'
+          // 'https://assets.coingecko.com/coins/images/1/small/bitcoin.png '
+        })
        const coinName =  Object.assign(document.createElement('p'),
         {
           textContent: data.name
