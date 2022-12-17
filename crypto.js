@@ -132,13 +132,15 @@ function coinDetails(coinId)
 
 function renderDetails(data)
 {
+  const searchb = document.getElementById('searchBar')
+  searchb.style.display = 'none'
  const show =  document.getElementById('show')
  show.innerHTML = `
  <div class="coin-container">
   
    
      <div class="content">
-         <h1>${data.name}</h1>  <span><button>Add to Watchlist +</button></span>
+         <h1>${data.name}</h1>  <span class = "spn ${data.name}"><button>Add to Watchlist +</button></span>
      </div>
      <div class="content">
          <div class="rank">
@@ -185,76 +187,19 @@ function renderDetails(data)
      </div>
  </div>
 `
-    // const detailContainer =  document.querySelector('.coin-container')
-    // const content = Object.assign(document.createElement('div'), {
-    //   className: 'content',
-    // })
-    // detailContainer.appendChild(content)
-    // content.append(
-    //   Object.assign(document.createElement('h1'),
-    //   {
-    //     textContent: data.id
-    //   })
-    // )
-    // const content2 = Object.assign(document.createElement('div'),
-    // {
-    //   className: 'content'
-    // })
-    // detailContainer.appendChild(content2)
-    //  const rankDiv =  Object.assign(document.createElement('div'),
-    //   {
-    //     className:'rank'
-    //   })
-    //   content2.appendChild(rankDiv)
-    //   const rankData = Object.assign(document.createElement('span'),
-    //     {
-    //       className: 'rank-btn',
-    //       textContent: data.market_cap_rank
-    //     })
-    //     rankDiv.appendChild(rankData)
-    //   const infoDiv = Object.assign(document.createElement('div'),
-    //   {
-    //     className: 'info'
-    //   })
-    //   content2.appendChild(infoDiv)
-    //   //const urlImg = JSON.stringify(data.image)
-    //   const imdContent = Object.assign(document.createElement('img'),
-    //     {
-          
-    //       src: 'https://cdn-icons-png.flaticon.com/128/5448/5448163.png'
-    //       // 'https://assets.coingecko.com/coins/images/1/small/bitcoin.png '
-    //     })
-    //    const coinName =  Object.assign(document.createElement('p'),
-    //     {
-    //       textContent: data.name
-    //     })
-    //     const coinSymbool = Object.assign(document.createElement('p'),
-    //     {
-    //       textContent: data.symbol
-    //     })
-    //     infoDiv.appendChild(imdContent)
-    //     infoDiv.appendChild(coinName)
-    //     infoDiv.appendChild(coinSymbool)
-    
+let addingBtn = document.getElementById('watch')
+addingBtn.addEventListener('click',()=>
+{
+  console.log('watching')
+  if(data.name != '')
+  {
+    console.log(data.name)
+  }
+})
 }
-// function searchCoin(coin)
-// {
-//   searchBar.addEventListener('keyup', (e)=>
-//   {
-//     console.log(e.target.value.toUpperCase())
-//     // console.log(e.target.value)
-//     const targetSearch  = e.target.value
-//     const filtered = coin.filter(coin=>{
-//       return coin.id.includes(targetSearch) || coin.symbol.includes(targetSearch)
-//     })
-//     console.log(filtered)
-    
-//   })
-// }
 document.addEventListener('DOMContentLoaded', ()=>
 {
     fetchCoins();
-  //  coinDetails();
     
 })
 //     container.innerHTML = `<div>
@@ -345,3 +290,67 @@ document.addEventListener('DOMContentLoaded', ()=>
     
 //   })
 // })
+ // const detailContainer =  document.querySelector('.coin-container')
+    // const content = Object.assign(document.createElement('div'), {
+    //   className: 'content',
+    // })
+    // detailContainer.appendChild(content)
+    // content.append(
+    //   Object.assign(document.createElement('h1'),
+    //   {
+    //     textContent: data.id
+    //   })
+    // )
+    // const content2 = Object.assign(document.createElement('div'),
+    // {
+    //   className: 'content'
+    // })
+    // detailContainer.appendChild(content2)
+    //  const rankDiv =  Object.assign(document.createElement('div'),
+    //   {
+    //     className:'rank'
+    //   })
+    //   content2.appendChild(rankDiv)
+    //   const rankData = Object.assign(document.createElement('span'),
+    //     {
+    //       className: 'rank-btn',
+    //       textContent: data.market_cap_rank
+    //     })
+    //     rankDiv.appendChild(rankData)
+    //   const infoDiv = Object.assign(document.createElement('div'),
+    //   {
+    //     className: 'info'
+    //   })
+    //   content2.appendChild(infoDiv)
+    //   //const urlImg = JSON.stringify(data.image)
+    //   const imdContent = Object.assign(document.createElement('img'),
+    //     {
+          
+    //       src: 'https://cdn-icons-png.flaticon.com/128/5448/5448163.png'
+    //       // 'https://assets.coingecko.com/coins/images/1/small/bitcoin.png '
+    //     })
+    //    const coinName =  Object.assign(document.createElement('p'),
+    //     {
+    //       textContent: data.name
+    //     })
+    //     const coinSymbool = Object.assign(document.createElement('p'),
+    //     {
+    //       textContent: data.symbol
+    //     })
+    //     infoDiv.appendChild(imdContent)
+    //     infoDiv.appendChild(coinName)
+    //     infoDiv.appendChild(coinSymbool)
+    // function searchCoin(coin)
+// {
+//   searchBar.addEventListener('keyup', (e)=>
+//   {
+//     console.log(e.target.value.toUpperCase())
+//     // console.log(e.target.value)
+//     const targetSearch  = e.target.value
+//     const filtered = coin.filter(coin=>{
+//       return coin.id.includes(targetSearch) || coin.symbol.includes(targetSearch)
+//     })
+//     console.log(filtered)
+    
+//   })
+// }
