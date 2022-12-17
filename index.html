@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
-<body id="body">
-
+<body>
+<div class="nav">
+    <nav>
+        <h3 class="crypLogo">CRYP <span>HOOD</span> </h3>
+        <ul>
+            <li></li>
+            <li>Watchlist</li>
+            <li>search</li>
+            <li>News</li>
+        </ul>
+        <button type="button">Contuct</button>
+    </nav>
+</div>
     <button id="btn"> x</button>
   <input
    type="text"
@@ -16,8 +27,8 @@
     id="searchBar"
     placeholder="Search for coin"
     >
-    <div class="container" id="body">
-    
+    <div class="container" id="b">
+    <div id="body"></div>
     <template coin-template class="row-header">
         <div>
        
@@ -33,7 +44,8 @@
             </template>
         <div id="appendKids" >
             <template kids>
-                <div>
+                <div class="coinContent">
+                    <div></div>
             <div class="c-row"> 
                 <p class="p0">${coin.market_cap_rank}</p>
            
@@ -53,10 +65,12 @@
         </div>
     </div>
   <div style="display: none;" id="show">
-    <div class="coin-container">
+    <div> <button>Add to watclist</button></div>
+   
+    <!-- <div class="coin-container">
      
       
-        <!-- <div class="content">
+        <div class="content">
             <h1>coin name</h1>
         </div>
         <div class="content">
@@ -68,7 +82,7 @@
                 <p>coin name</p>
                 <p>coin symbol</p>
                 
-            </div> -->
+            </div>
             <div class="coinprice">
                 <h1> current price</h1>
             </div>
@@ -128,7 +142,7 @@
             <h3>About</h3>
             <p>description</p>
         </div>
-    </div>
+    </div> -->
     </div>
 <!-- <div class="container">
 

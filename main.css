@@ -2,6 +2,48 @@
     box-sizing: border-box;
 
 }
+
+/* Nav Bar */
+.nav{
+    
+    width: 100%;
+    background:white;
+    background-size: contain;
+    background-position: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.crypLogo{
+    color: red;
+    font-size: 28px;
+}
+.crypLogo span{
+    color: blue;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+nav ul li:hover{
+    color: blue;
+    cursor: pointer;
+}
+.nav button{
+    border: none;
+    background: red;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
 /* All Coins table */
 .cotainer{
     max-width: 1024px;
@@ -23,12 +65,15 @@ img{
 }
 /* Specific coin */
 .coin-container .content{
+    max-width: 700px;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column; 
+    text-align: center;
+    margin: auto;
 }
 .stats .row{
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 .rank{
     background-color: red;
