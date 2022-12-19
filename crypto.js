@@ -3,7 +3,6 @@ const urlCoinDetails = 'https://api.coingecko.com/api/v3/coins/bitcoin'
 const coinTemplate= document.querySelector('[coin-template]')
 const coinDisply= document.querySelector('[kids]')
 const boddy = document.getElementById('body')
-const searchBar = document.getElementById('searchBar')
 const coinContetnt = document.querySelector('.coinContent')
 console.log(coinDisply)
 let coinss = [];
@@ -48,26 +47,27 @@ function fetchCoins()
             
         },[]);
 };
-const containerRow  = coinTemplate.content.cloneNode(true).children[0]
-//const headRow = containerRow.querySelector('[head-row]')
-const prank = containerRow.querySelector('.prank')
-prank.textContent = '#'
-const pcoin = containerRow.querySelector('.pcoin')
-pcoin.textContent = 'coin'
-const pprice = containerRow.querySelector('.pprice')
-pprice.textContent = 'price'
-const ptime =containerRow.querySelector('.ptime')
-ptime.textContent = 'time'
-const pvolume = containerRow.querySelector('.pvolume') 
-pvolume.textContent = 'volume'
-const pcap = containerRow.querySelector('.pcap')
-pcap.textContent = 'market cap'
 
-boddy.appendChild(containerRow) // Append
 
 function renderCoins(coin)
 {
- 
+  const searchBar = document.getElementById('searchBar')
+  const containerRow  = coinTemplate.content.cloneNode(true).children[0]
+  //const headRow = containerRow.querySelector('[head-row]')
+  const prank = containerRow.querySelector('.prank')
+  prank.textContent = '#'
+  const pcoin = containerRow.querySelector('.pcoin')
+  pcoin.textContent = 'coin'
+  const pprice = containerRow.querySelector('.pprice')
+  pprice.textContent = 'price'
+  const ptime =containerRow.querySelector('.ptime')
+  ptime.textContent = 'time'
+  const pvolume = containerRow.querySelector('.pvolume') 
+  pvolume.textContent = 'volume'
+  const pcap = containerRow.querySelector('.pcap')
+  pcap.textContent = 'market cap'
+  
+  boddy.appendChild(containerRow) // Append
  
   //searchCoin(coin)
 
@@ -193,13 +193,71 @@ addingBtn.addEventListener('click',()=>
   console.log('watching')
   if(data.name != '')
   {
+    
     console.log(data.name)
   }
 })
 }
+function fetching(){
+  fetch('https://reqres.in/api/users')
+  .then(res=>res.json())
+  .then(dat=>{console.log(dat)})
+  const formData = document.getElementById('form')
+formData.addEventListener('submit', (e)=>
+{
+    e.preventDefault()
+    // const pass = e.target.pass.value
+    // const email = e.target.email.value
+    // let formInfo ={
+    //   email:email,
+    //   pass:pass
+    fetchCoins()
+    sessionStorage.setItem('status','loggedIn')
+
+    if (sessionStorage.getItem('status') != null)
+  { //redirect to page
+	console.log('You are logged in');
+  alert('You are logged in')
+  window.location == 'index.html'
+
+  document.querySelector('.contain-form').style.display = 'none'
+   window.onbeforeunload = function(){
+    document.querySelector('.contain-form').style.display = 'none'
+  }
+}
+
+else{
+    //show validation message
+  console.log('You are not logged in');
+}
+    // }
+     const formInfo = new FormData(formData)
+     const formDataSerialized = Object.fromEntries(formInfo)
+    // console.log(formDataSerialized)
+   //console.log(formInfo)
+   
+      fetch('https://reqres.in/api/users',
+      {
+         method:'POST',
+         headers: {'Content-Type': 'application/json'
+          },
+         body:JSON.stringify(formDataSerialized)
+      })
+      .then(res=>res.json())
+      .then(data=>{
+        console.log(data)
+        localStorage.clear()
+        localStorage.id = data.id
+        console.log(data.id)
+      
+      }).catch(err=>console.log(err))
+    
+})
+}
 document.addEventListener('DOMContentLoaded', ()=>
 {
-    fetchCoins();
+ 
+    fetching()
     
 })
 //     container.innerHTML = `<div>

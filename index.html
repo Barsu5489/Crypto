@@ -20,14 +20,29 @@
         <button type="button">Contuct</button>
     </nav>
 </div>
+<div class="contain-form">
+<form id="form">
+    <h1>Login Form</h1>
+    <div class="form-section">
+        <label for="">Email</label>
+    <input id="email" name="email" type="email" placeholder="email"  class="inputs" required>
+   </div>
+   <div class="form-section">
+    <label for="">password</label>
+    <input id="pass" name="password" type="password" placeholder="password" class="inputs" required>
+</div>
+    <button type="submit">submit</button>
+</form>
+</div>
     <button id="watch">Add to watch list</button>
-  <input style="display: block;"
-   type="text"
-    value=""
-    id="searchBar"
-    placeholder="Search for coin"
-    >
+ 
     <div class="container" id="b">
+        <input style="display: block;"
+        type="text"
+         value=""
+         id="searchBar"
+         placeholder="Search for coin"
+         >
     <div id="body"></div>
     <template coin-template class="row-header">
         <div>
@@ -65,8 +80,6 @@
         </div>
     </div>
   <div id="show">
-    <div> <button>Add to watclist</button></div>
-   
     <!-- <div class="coin-container">
      
       
