@@ -11,13 +11,20 @@
 <div class="nav">
     <nav>
         <h3 class="crypLogo">CRYP <span>HOOD</span> </h3>
+
         <ul>
-            <li></li>
-            <li>Watchlist</li>
+   
             <li>search</li>
             <li>News</li>
         </ul>
-        <button type="button">Contuct</button>
+        <div class="dropdown">
+            <h4>Watchlist</h4>
+            <div class="dropdown-content" >
+            
+            </div>
+        </div>
+                 
+        
     </nav>
 </div>
 <div class="contain-form">
@@ -34,14 +41,15 @@
     <button type="submit">submit</button>
 </form>
 </div>
-    <button id="watch">Add to watch list</button>
+    <button id="watch" style="display: none;">Add to watch list</button>
  
     <div class="container" id="b">
-        <input style="display: block;"
+        <input style="display: 'none';"
         type="text"
          value=""
          id="searchBar"
          placeholder="Search for coin"
+         
          >
     <div id="body"></div>
     <template coin-template class="row-header">

@@ -4,6 +4,7 @@ const coinTemplate= document.querySelector('[coin-template]')
 const coinDisply= document.querySelector('[kids]')
 const boddy = document.getElementById('body')
 const coinContetnt = document.querySelector('.coinContent')
+const searchBar = document.getElementById('searchBar')
 console.log(coinDisply)
 let coinss = [];
 //console.log(coinss)
@@ -51,7 +52,7 @@ function fetchCoins()
 
 function renderCoins(coin)
 {
-  const searchBar = document.getElementById('searchBar')
+
   const containerRow  = coinTemplate.content.cloneNode(true).children[0]
   //const headRow = containerRow.querySelector('[head-row]')
   const prank = containerRow.querySelector('.prank')
@@ -193,7 +194,16 @@ addingBtn.addEventListener('click',()=>
   console.log('watching')
   if(data.name != '')
   {
-    
+    const dropDown = document.querySelector('.dropdown-content')
+    let li = document.createElement('li')
+    li.textContent = data.name
+    const btnRm = document.createElement('button')
+    btnRm.textContent = 'x'
+    dropDown.appendChild(li)
+    li.appendChild(btnRm)
+    btnRm.addEventListener('click', ()=>{
+      li.remove()
+    })
     console.log(data.name)
   }
 })
