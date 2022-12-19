@@ -97,6 +97,8 @@ function renderCoins(coin)
      const appendKids = document.getElementById('appendKids')
      appendKids.appendChild(containerRow2)
      const container = document.querySelector('.container');
+     const searchb = document.getElementById('searchBar')
+     searchb.style.display = 'block'
     
      cRow.addEventListener('click',(e)=>
      {
@@ -133,8 +135,6 @@ function coinDetails(coinId)
 
 function renderDetails(data)
 {
-  const searchb = document.getElementById('searchBar')
-  searchb.style.display = 'none'
  const show =  document.getElementById('show')
  show.innerHTML = `
  <div class="coin-container">
