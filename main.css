@@ -61,6 +61,7 @@ nav ul li:hover{
     background-color: red;
     border: 1px solid silver;
 }
+
 /* .nav button{
     border: none;
     background: red;
@@ -71,6 +72,14 @@ nav ul li:hover{
     font-size: 15px;
 } */
 /* All Coins table */
+
+/* Search Bar */
+#searchBar{
+    margin: auto;
+    margin-left: 50%;
+    width: 300px;
+    height: 40px;
+}
 .cotainer{
     max-width: 1024px;
     margin: auto;
