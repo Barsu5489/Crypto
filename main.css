@@ -145,6 +145,19 @@ img{
 .p{
     margin-left: -3rem;
 }
+.Mr-flex{
+    display: flex;
+    justify-content: space-around;
+}
+.coin-container2 .content2{
+    max-width: 500px;
+    border: 1px solid white;
+    float:right;
+    text-align: center;
+    
+}
+/* Styling Watch list*/
+
 /* Specific coin */
 .coin-container .content{
     max-width: 700px;
@@ -152,10 +165,10 @@ img{
     display: flex;
     flex-direction: column; 
     text-align: center;
-    margin: auto;
     background-color: rgba(0, 0, 0, .7);
     color: white;
 }
+
 .stats .row{
     display: flex;
     justify-content: space-between;

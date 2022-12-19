@@ -139,11 +139,12 @@ function renderDetails(data)
 {
  const show =  document.getElementById('show')
  show.innerHTML = `
+ <div class = "Mr-flex">
  <div class="coin-container">
   
    
      <div class="content">
-         <h1>${data.name}</h1>  <span class = "spn ${data.name}">
+         <h1>${data.name}</h1>  <span class = "spn ${data.name}"> <button> Add to WatchList </button> </span>
      </div>
      <div class="content">
          <div class="rank">
@@ -188,6 +189,35 @@ function renderDetails(data)
          <h3>About</h3>
          <p>${data.description.en}</p>
      </div>
+ </div>
+ <div class="coin-container2" id ="container-content">
+  
+  
+     <div class="content2">
+         <h1>${data.name}</h1>  <span class = "spn ${data.name}"> 
+     </div>
+     <div class="content2">
+         <div class="rank2">
+             <span class="rank-btn">${data.market_cap_rank}</span>
+         </div>
+         <div class="info2">
+         <div class='coin-head2'>
+             <img src="${data.image.small}" alt="">
+             <p>${data.id}</p>
+             <p>${data.symbol}</p>
+             </div> 
+         </div>
+         <div class="coinprice2">
+             <h1>Current Price: ${data.market_data.current_price.usd}$</h1>
+         </div>
+     </div>
+     <div class="content2"> 
+     </div>
+     <div class="content2">
+         <h3>About</h3>
+         <p>Description</p>
+     </div>
+ </div>
  </div>
 `
 let tr1 = document.getElementById('show').getElementsByTagName('td')[0].textContent
@@ -244,12 +274,10 @@ else{
   document.getElementById('show').getElementsByTagName('td')[5].style.color = 'green'
 }
 
-
-document.getElementById('watch').style.display = 'block'
-let addingBtn = document.getElementById('watch')
-addingBtn.addEventListener('click',()=>
+let watchListButton = document.getElementById('show').getElementsByTagName('button')[0]
+watchListButton.addEventListener('click', ()=>
 {
-  alert('Coin added to Watchlist')
+  alert(`#${data.name.toUpperCase()}# has been added to Watchlist`)
   if(data.name != '')
   {
     const dropDown = document.querySelector('.dropdown-content')
@@ -261,63 +289,111 @@ addingBtn.addEventListener('click',()=>
     li.appendChild(btnRm)
     btnRm.addEventListener('click', ()=>{
       li.remove()
+
+
     })
     console.log(data.name)
   }
+  const addToWatchList1  = document.getElementById('show').childNodes[0].nextSibling
+  addToWatchList1.innerHTML += `<div class="coin-container2" id ="container-content">
+  
+  
+  <div class="content2">
+      <h1>${data.name}</h1>  <span class = "spn ${data.name}"> 
+  </div>
+  <div class="content2">
+      <div class="rank2">
+          <span class="rank-btn">${data.market_cap_rank}</span>
+      </div>
+      <div class="info2">
+      <div class='coin-head2'>
+          <img src="${data.image.small}" alt="">
+          <p>${data.id}</p>
+          <p>${data.symbol}</p>
+          </div> 
+      </div>
+      <div class="coinprice2">
+          <h1>Current Price: ${data.market_data.current_price.usd}$</h1>
+      </div>
+  </div>
+  <div class="content2"> 
+  </div>
+  <div class="content2">
+      <h3>About</h3>
+      <p>Description</p>
+  </div>
+</div>` 
+  console.log(addToWatchList1)
+//   addToWatchList1.innerHTML += ` <div class="content2">
+//   <h1>${data.name}</h1>  <span class = "spn ${data.name}">
+// </div>
+// <div class="content2">
+//   <div class="rank2">
+//       <span class="rank-btn">${data.market_cap_rank}</span>
+//   </div>
+//   <div class="info2">
+//   <div class='coin-head2'>
+//       <img src="${data.image.small}" alt="">
+//       <p>${data.id}</p>
+//       <p>${data.symbol}</p>
+//       </div> 
+//   </div>
+//   <div class="coinprice2">
+//       <h1>Current Price: ${data.market_data.current_price.usd}$</h1>
+//   </div>
+// </div>
+// <div class="content2"> 
+// </div>
+// <div class="content2">
+//   <h3>About</h3>
+//   <p>Description</p>
+// </div>`
+console.log(addToWatchList1)
 })
+console.log(watchListButton)
+
+// document.getElementById('watch').style.display = 'block'
+// let addingBtn = document.getElementById('watch')
+// addingBtn.addEventListener('click',()=>
+// {
+//   alert(`#${data.name.toUpperCase()}# has been added to Watchlist`)
+//   if(data.name != '')
+//   {
+//     const dropDown = document.querySelector('.dropdown-content')
+//     let li = document.createElement('li')
+//     li.textContent = data.name
+//     const btnRm = document.createElement('button')
+//     btnRm.textContent = 'x'
+//     dropDown.appendChild(li)
+//     li.appendChild(btnRm)
+//     btnRm.addEventListener('click', ()=>{
+//       li.remove()
+//     })
+//     console.log(data.name)
+//   }
+// })
 }
 function fetching(){
-  fetch('https://reqres.in/api/users')
-  .then(res=>res.json())
-  .then(dat=>{console.log(dat)})
   const formData = document.getElementById('form')
 formData.addEventListener('submit', (e)=>
 {
     e.preventDefault()
-    // const pass = e.target.pass.value
-    // const email = e.target.email.value
-    // let formInfo ={
-    //   email:email,
-    //   pass:pass
     fetchCoins()
-    sessionStorage.setItem('status','loggedIn')
 
+    // User has to input data for login or any click events to occur
+    sessionStorage.setItem('status','logged')
     if (sessionStorage.getItem('status') != null)
-  { //redirect to page
-  window.location == 'index.html'
-
+  { 
+    
+  //Form desapears after login
   document.querySelector('.contain-form').style.display = 'none'
-   window.onbeforeunload = function(){
-    document.querySelector('.contain-form').style.display = 'none'
-  }
+  
 }
 
 else{
     //show validation message
   console.log('You are not logged in');
-}
-    // }
-     const formInfo = new FormData(formData)
-     const formDataSerialized = Object.fromEntries(formInfo)
-    // console.log(formDataSerialized)
-   //console.log(formInfo)
-   
-      fetch('https://reqres.in/api/users',
-      {
-         method:'POST',
-         headers: {'Content-Type': 'application/json'
-          },
-         body:JSON.stringify(formDataSerialized)
-      })
-      .then(res=>res.json())
-      .then(data=>{
-        console.log(data)
-        localStorage.clear()
-        localStorage.id = data.id
-        console.log(data.id)
-      
-      }).catch(err=>console.log(err))
-    
+}   
 })
 }
 document.addEventListener('DOMContentLoaded', ()=>
