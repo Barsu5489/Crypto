@@ -47,7 +47,7 @@ nav{
     color: blue;
   }
 .crypLogo{
-    color: red;
+    color: green;
     font-size: 28px;
 }
 .crypLogo span{
@@ -83,16 +83,7 @@ nav ul li:hover{
 cursor: pointer;
 }
 
-/* .nav button{
-    border: none;
-    background: red;
-    padding: 12px 30px;
-    border-radius: 30px;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-} */
-/* All Coins table */
+
 
 /* Search Bar */
 #searchBar{
@@ -103,6 +94,8 @@ cursor: pointer;
     border-radius: 4px;
     border: 1px solid silver;
 }
+
+/* All Coins table */
 .cotainer{
     max-width: 1024px;
     margin: auto;

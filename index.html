@@ -26,6 +26,47 @@
         
     </nav>
 </div>
+<div class="tradingview-widget-container" style="pointer-events: none;">
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      {
+        "proName": "BITSTAMP:BTCUSD",
+        "title": "Bitcoin"
+      },
+      {
+        "proName": "BITSTAMP:ETHUSD",
+        "title": "Ethereum"
+      },
+      {
+        "description": "",
+        "proName": "CRYPTOCAP:USDT.D"
+      },
+      {
+        "description": "",
+        "proName": "BINANCE:DOGEBUSD"
+      },
+      {
+        "description": "",
+        "proName": "BINANCE:ADAUSDT"
+      },
+      {
+        "description": "",
+        "proName": "BINANCE:MATICUSDT"
+      },
+      {
+        "description": "",
+        "proName": "BITSTAMP:LTCUSD"
+      }
+    ],
+    "showSymbolLogo": true,
+    "colorTheme": "light",
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "locale": "en"
+  }
+    </script>
+  </div>
 <div class="contain-form">
 <form id="form">
     <h1>Login Form</h1>
@@ -37,7 +78,7 @@
     <label for="">password</label>
     <input id="pass" name="password" type="password" placeholder="password" class="inputs" required>
 </div>
-    <button type="submit">submit</button>
+    <button type="submit" id="loginButton">login</button>
 </form>
 </div>
     <button id="watch" style="display: none;">Add to watch list</button>
@@ -167,6 +208,9 @@
 <!-- <div class="container">
 
 </div> -->
+<!-- TradingView Widget BEGIN -->
+
+  <!-- TradingView Widget END -->
     <script src="crypto.js"></script>
 </body>
 </html>

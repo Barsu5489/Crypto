@@ -90,11 +90,11 @@ function renderCoins(coin)
       coinSymbal.textContent = coin.id
       const currentPrize = containerRow2.querySelector('.p1')
       currentPrize.textContent = coin.current_price
-      const priceChange = containerRow2.querySelector('.p2')
+      let priceChange = containerRow2.querySelector('.p2')
       priceChange.textContent = coin.price_change_24h
-      const totalVolume = containerRow2.querySelector('.p3')
+      let totalVolume = containerRow2.querySelector('.p3')
       totalVolume.textContent = coin.total_volume
-      const coinMarkCap =  containerRow2.querySelector('.p4')
+      let coinMarkCap =  containerRow2.querySelector('.p4')
       coinMarkCap.textContent = coin.market_cap
      const appendKids = document.getElementById('appendKids')
      appendKids.appendChild(containerRow2)
@@ -164,8 +164,8 @@ function renderDetails(data)
        <table>
          <thead>
              <tr>
-                 <th>1h</th>
-                 <th>1day</th>
+                 <th>60 mins</th>
+                 <th>24 hrs</th>
                  <th>7days</th>
                  <th>14days</th>
                  <th>1month</th>
