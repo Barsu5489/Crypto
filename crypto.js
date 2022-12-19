@@ -9,13 +9,11 @@ const searchBar = document.getElementById('searchBar')
 
 console.log(coinDisply)
 let coinss = [];
-//console.log(coinss)
 searchBar.addEventListener('input', (e)=>
   {
     const value = e.target.value.toLowerCase()
     console.log(coinss)
-    // ce.target.value)
-  //  console.log(coinss)
+  
       coinss.forEach(coin=>
       {
         console.log(coin.id)
@@ -32,11 +30,6 @@ searchBar.addEventListener('input', (e)=>
         
         
       })
-//     coinss.forEach(crypto=>
-//       {
-//         const available = crypto.name.includes(value)
-//         crypto.element.classList.toggle('hide', !available) 
-//       })
     
 })
 function fetchCoins()
@@ -56,7 +49,6 @@ function renderCoins(coin)
 {
 
   const containerRow  = coinTemplate.content.cloneNode(true).children[0]
-  //const headRow = containerRow.querySelector('[head-row]')
   const prank = containerRow.querySelector('.prank')
   prank.textContent = '#'
   const pcoin = containerRow.querySelector('.pcoin')
@@ -73,9 +65,6 @@ function renderCoins(coin)
   boddy.appendChild(containerRow) // Append
  
   //searchCoin(coin)
-
-      console.log(coin)
-      //searchCoin(coin)
 
      coinss =  coin.map(coin=>{
       const containerRow2 = coinDisply.content.cloneNode(true).children[0]
@@ -98,7 +87,6 @@ function renderCoins(coin)
       coinMarkCap.textContent = coin.market_cap
      const appendKids = document.getElementById('appendKids')
      appendKids.appendChild(containerRow2)
-     //const container = document.querySelector('.container');
      const searchb = document.getElementById('searchBar')
      searchb.style.display = 'block'
     
@@ -111,7 +99,6 @@ function renderCoins(coin)
        
        if(abs == coin.id)
        {
-          // console.log(abs)
            coinDetails(abs)
        }
        else{console.log('err') }
@@ -324,54 +311,10 @@ watchListButton.addEventListener('click', ()=>
   </div>
 </div>` 
   console.log(addToWatchList1)
-//   addToWatchList1.innerHTML += ` <div class="content2">
-//   <h1>${data.name}</h1>  <span class = "spn ${data.name}">
-// </div>
-// <div class="content2">
-//   <div class="rank2">
-//       <span class="rank-btn">${data.market_cap_rank}</span>
-//   </div>
-//   <div class="info2">
-//   <div class='coin-head2'>
-//       <img src="${data.image.small}" alt="">
-//       <p>${data.id}</p>
-//       <p>${data.symbol}</p>
-//       </div> 
-//   </div>
-//   <div class="coinprice2">
-//       <h1>Current Price: ${data.market_data.current_price.usd}$</h1>
-//   </div>
-// </div>
-// <div class="content2"> 
-// </div>
-// <div class="content2">
-//   <h3>About</h3>
-//   <p>Description</p>
-// </div>`
 console.log(addToWatchList1)
 })
 console.log(watchListButton)
 
-// document.getElementById('watch').style.display = 'block'
-// let addingBtn = document.getElementById('watch')
-// addingBtn.addEventListener('click',()=>
-// {
-//   alert(`#${data.name.toUpperCase()}# has been added to Watchlist`)
-//   if(data.name != '')
-//   {
-//     const dropDown = document.querySelector('.dropdown-content')
-//     let li = document.createElement('li')
-//     li.textContent = data.name
-//     const btnRm = document.createElement('button')
-//     btnRm.textContent = 'x'
-//     dropDown.appendChild(li)
-//     li.appendChild(btnRm)
-//     btnRm.addEventListener('click', ()=>{
-//       li.remove()
-//     })
-//     console.log(data.name)
-//   }
-// })
 }
 function fetching(){
   const formData = document.getElementById('form')
