@@ -143,7 +143,7 @@ function renderDetails(data)
   
    
      <div class="content">
-         <h1>${data.name}</h1>  <span class = "spn ${data.name}"><button>Add to Watchlist +</button></span>
+         <h1>${data.name}</h1>  <span class = "spn ${data.name}">
      </div>
      <div class="content">
          <div class="rank">
