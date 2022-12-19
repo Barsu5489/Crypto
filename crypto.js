@@ -190,6 +190,60 @@ function renderDetails(data)
      </div>
  </div>
 `
+let tr1 = document.getElementById('show').getElementsByTagName('td')[0].textContent
+if(tr1<0)
+{
+  document.getElementById('show').getElementsByTagName('td')[0].style.color = 'red'
+}
+else{
+  document.getElementById('show').getElementsByTagName('td')[0].style.color = 'green'
+}
+//Setting color for column data two
+let tr2 = document.getElementById('show').getElementsByTagName('td')[1].textContent
+if(tr2<0)
+{
+  document.getElementById('show').getElementsByTagName('td')[1].style.color = 'red'
+}
+else{
+  document.getElementById('show').getElementsByTagName('td')[1].style.color = 'green'
+}
+//Setting color for column data three
+let tr3 = document.getElementById('show').getElementsByTagName('td')[2].textContent
+if(tr3<0)
+{
+  document.getElementById('show').getElementsByTagName('td')[2].style.color = 'red'
+}
+else{
+  document.getElementById('show').getElementsByTagName('td')[2].style.color = 'green'
+}
+//Setting color for column data four
+let tr4 = document.getElementById('show').getElementsByTagName('td')[3].textContent
+if(tr4<0)
+{
+  document.getElementById('show').getElementsByTagName('td')[3].style.color = 'red'
+}
+else{
+  document.getElementById('show').getElementsByTagName('td')[3].style.color = 'green'
+}
+//Setting color for column data five
+let tr5 = document.getElementById('show').getElementsByTagName('td')[4].textContent
+if(tr5<0)
+{
+  document.getElementById('show').getElementsByTagName('td')[4].style.color = 'red'
+}
+else{
+  document.getElementById('show').getElementsByTagName('td')[4].style.color = 'green'
+}
+//Setting color for column data six
+let tr6 = document.getElementById('show').getElementsByTagName('td')[5].textContent
+if(tr6<0)
+{
+  document.getElementById('show').getElementsByTagName('td')[5].style.color = 'red'
+}
+else{
+  document.getElementById('show').getElementsByTagName('td')[5].style.color = 'green'
+}
+
 
 document.getElementById('watch').style.display = 'block'
 let addingBtn = document.getElementById('watch')
@@ -230,8 +284,6 @@ formData.addEventListener('submit', (e)=>
 
     if (sessionStorage.getItem('status') != null)
   { //redirect to page
-	console.log('You are logged in');
-  alert('You are logged in')
   window.location == 'index.html'
 
   document.querySelector('.contain-form').style.display = 'none'

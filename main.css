@@ -148,10 +148,13 @@ img{
 /* Specific coin */
 .coin-container .content{
     max-width: 700px;
+    border: 1px solid white;
     display: flex;
     flex-direction: column; 
     text-align: center;
     margin: auto;
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
 }
 .stats .row{
     display: flex;
@@ -202,4 +205,8 @@ img{
 }
 li{
     color: white;
+}
+
+#green{
+    color: green;
 }
