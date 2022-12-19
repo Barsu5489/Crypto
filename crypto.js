@@ -188,6 +188,8 @@ function renderDetails(data)
      </div>
  </div>
 `
+
+document.getElementById('watch').style.display = 'block'
 let addingBtn = document.getElementById('watch')
 addingBtn.addEventListener('click',()=>
 {
