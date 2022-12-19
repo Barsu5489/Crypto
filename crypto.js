@@ -87,7 +87,7 @@ function renderCoins(coin)
       const imgContent = containerRow2.querySelector('#coinIcon')
       imgContent.src = coin.image
       const coinSymbal = containerRow2.querySelector('.p-p')
-      coinSymbal.textContent = coin.id
+      coinSymbal.textContent = coin.symbol
       const currentPrize = containerRow2.querySelector('.p1')
       currentPrize.textContent = coin.current_price
       let priceChange = containerRow2.querySelector('.p2')
@@ -195,7 +195,7 @@ document.getElementById('watch').style.display = 'block'
 let addingBtn = document.getElementById('watch')
 addingBtn.addEventListener('click',()=>
 {
-  console.log('watching')
+  alert('Coin added to Watchlist')
   if(data.name != '')
   {
     const dropDown = document.querySelector('.dropdown-content')
