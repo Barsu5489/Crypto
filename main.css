@@ -24,6 +24,10 @@ nav{
 .dropdown{
     overflow: hidden;
 }
+.dropdown h4:hover{
+    cursor: pointer;
+    color: blue;
+}
 .dropdown-content{
     display: none;
 }
@@ -39,6 +43,8 @@ nav{
   }
 .dropdown:hover .dropdown-content {
     display: block;
+    cursor: pointer;
+    color: blue;
   }
 .crypLogo{
     color: red;
@@ -79,6 +85,8 @@ nav ul li:hover{
     margin-left: 50%;
     width: 300px;
     height: 40px;
+    border-radius: 4px;
+    border: 1px solid silver;
 }
 .cotainer{
     max-width: 1024px;

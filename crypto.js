@@ -3,8 +3,10 @@ const urlCoinDetails = 'https://api.coingecko.com/api/v3/coins/bitcoin'
 const coinTemplate= document.querySelector('[coin-template]')
 const coinDisply= document.querySelector('[kids]')
 const boddy = document.getElementById('body')
+const container = document.querySelector('.container');
 const coinContetnt = document.querySelector('.coinContent')
 const searchBar = document.getElementById('searchBar')
+
 console.log(coinDisply)
 let coinss = [];
 //console.log(coinss)
@@ -96,7 +98,7 @@ function renderCoins(coin)
       coinMarkCap.textContent = coin.market_cap
      const appendKids = document.getElementById('appendKids')
      appendKids.appendChild(containerRow2)
-     const container = document.querySelector('.container');
+     //const container = document.querySelector('.container');
      const searchb = document.getElementById('searchBar')
      searchb.style.display = 'block'
     
@@ -270,5 +272,10 @@ document.addEventListener('DOMContentLoaded', ()=>
 {
  
     fetching()
+    document.querySelector('.homePage').addEventListener('click',()=>{
+      container.style.display = 'block'
+      document.getElementById('show').style.display = 'none'
+      document.getElementById('watch').style.display = 'none'
+    })
     
 })
