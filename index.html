@@ -1,139 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
-</head>
-<body class="box"> 
-
-<div class="nav">
-    <nav>
-        <h3 class="crypLogo">CRYPTO <span>INFO</span> </h3>
-
+  </head>
+  <body class="box">
+    <div class="nav">
+      <nav>
+        <h3 class="crypLogo">CRYPTO <span>INFO</span>
+        </h3>
         <ul>
-   
-            <li class="homePage">search</li>
+          <li class="homePage">search</li>
         </ul>
         <div class="dropdown">
-            <h4 >Watchlist</h4>
-            <div class="dropdown-content" >
-            </div>
+          <h4>Watchlist</h4>
+          <div class="dropdown-content"></div>
         </div>
-                 
-        
-    </nav>
-</div>
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container" style="pointer-events: none; background-color: rgb(44, 42, 42);" >
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-    {
-    "symbols"; [
-      {
-        "proName": "BITSTAMP:BTCUSD",
-        "title": "Bitcoin"
-      },
-      {
-        "proName": "BITSTAMP:ETHUSD",
-        "title": "Ethereum"
-      },
-      {
-        "description": "",
-        "proName": "CRYPTOCAP:USDT.D"
-      },
-      {
-        "description": "",
-        "proName": "BINANCE:DOGEBUSD"
-      },
-      {
-        "description": "",
-        "proName": "BINANCE:ADAUSDT"
-      },
-      {
-        "description": "",
-        "proName": "BINANCE:MATICUSDT"
-      },
-      {
-        "description": "",
-        "proName": "BITSTAMP:LTCUSD"
-      }
-    ],
-    "showSymbolLogo"; true,
-    "colorTheme"; "light",
-    "isTransparent"; false,
-    "displayMode"; "adaptive",
-    "locale"; "en"
-  }
-    </script>
-  </div>
-  
-<div class="contain-form">
-<form id="form">
-    <h1>Login Form</h1>
-    <div class="form-section">
-        <label for="">username</label>
-    <input id="email" name="username" type="username" placeholder="username"  class="inputs" required>
-   </div>
-   <div class="form-section">
-    <label for="">password</label>
-    <input id="pass" name="password" type="password" placeholder="password" class="inputs" required>
-</div>
-    <button type="submit" id="loginButton">login</button>
-</form>
-</div>
-    <button id="watch" style="display: none;">Add to watch list</button>
- 
-    <div class="container" id="b">
-        
-        <input style="display: none;"
-        type="text"
-         value=""
-         id="searchBar"
-         placeholder="Search for coin"
-         >
-    <div id="body"></div>
-    <template coin-template class="row-header">
-        <div>
-       
-                <div class="header" head-row>
-                    <p class="prank">#</p>
-                    <p class="pcoin">coin</p>
-                    <p class="pprice">price</p>
-                    <p class="ptime">time</p>
-                    <p class="pvolume">Volume</p>
-                    <p class="pcap">Market cap</p>
-                </div>
-            </div>
-            </template>
-        <div id="appendKids" >
-            <template kids>
-                <div class="coinContent">
-                    
-            <div class="c-row"> 
-                <p class="p0">${coin.market_cap_rank}</p>
-           
-                <div class="imgDiv">
-                    <img src="${coin.image}" alt="" srcset="" id="coinIcon">
-                    <p class="p-p">${coin.symbol}</p>
-                    
-                </div>
-                  <p class="p1">${coin.current_price}</p>
-                    <p class="p2">${coin.price_change_24h}</p>
-                    <p class="p3"> ${coin.total_volume}</p>
-                    <p class="p4">${coin.market_cap}</p>
-             </div>
-            </div>
-            </template>
-           
-        </div>
+      </nav>
     </div>
-  <div id="show">
-    
-
-
-  
-    <script src="crypto.js"></script>
-</body>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container" style="pointer-events: none; background-color: rgb(44, 42, 42);">
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+          "symbols";
+          [{
+            "proName": "BITSTAMP:BTCUSD",
+            "title": "Bitcoin"
+          }, {
+            "proName": "BITSTAMP:ETHUSD",
+            "title": "Ethereum"
+          }, {
+            "description": "",
+            "proName": "CRYPTOCAP:USDT.D"
+          }, {
+            "description": "",
+            "proName": "BINANCE:DOGEBUSD"
+          }, {
+            "description": "",
+            "proName": "BINANCE:ADAUSDT"
+          }, {
+            "description": "",
+            "proName": "BINANCE:MATICUSDT"
+          }, {
+            "description": "",
+            "proName": "BITSTAMP:LTCUSD"
+          }], "showSymbolLogo";
+          true, "colorTheme";
+          "light", "isTransparent";
+          false, "displayMode";
+          "adaptive", "locale";
+          "en"
+        }
+      </script>
+    </div>
+    <div class="contain-form">
+      <form id="form">
+        <h1>Login Form</h1>
+        <div class="form-section">
+          <label for="">username</label>
+          <input id="email" name="username" type="username" placeholder="username" class="inputs" required>
+        </div>
+        <div class="form-section">
+          <label for="">password</label>
+          <input id="pass" name="password" type="password" placeholder="password" class="inputs" required>
+        </div>
+        <button type="submit" id="loginButton">login</button>
+      </form>
+    </div>
+    <button id="watch" style="display: none;">Add to watch list</button>
+    <div class="container" id="b">
+      <input style="display: none;" type="text" value="" id="searchBar" placeholder="Search for coin">
+      <div id="body"></div>
+      <template coin-template class="row-header">
+        <div>
+          <div class="header" head-row>
+            <p class="prank">#</p>
+            <p class="pcoin">coin</p>
+            <p class="pprice">price</p>
+            <p class="ptime">time</p>
+            <p class="pvolume">Volume</p>
+            <p class="pcap">Market cap</p>
+          </div>
+        </div>
+      </template>
+      <div id="appendKids">
+        <template kids>
+          <div class="coinContent">
+            <div class="c-row">
+              <p class="p0">${coin.market_cap_rank}</p>
+              <div class="imgDiv">
+                <img src="${coin.image}" alt="" srcset="" id="coinIcon">
+                <p class="p-p">${coin.symbol}</p>
+              </div>
+              <p class="p1">${coin.current_price}</p>
+              <p class="p2">${coin.price_change_24h}</p>
+              <p class="p3"> ${coin.total_volume}</p>
+              <p class="p4">${coin.market_cap}</p>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+    <div id="show">
+      <script src="crypto.js"></script>
+  </body>
 </html>

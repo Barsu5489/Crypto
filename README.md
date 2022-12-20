@@ -5,8 +5,8 @@ This application is published to GitHub pages at the following location: https:/
 
 
 ## Instructions to access and use the application
-### Read the steps below before clicking on the link:
-- Once you have clicked the link; this link > (https://barsu5489.github.io/Crypto/)
+### Read the steps below before clicking on the link below:
+- Once you have clicked the link; >>> (https://barsu5489.github.io/Crypto/)
 1) You will land on the login page
 2) Username section:
         Type any random name(Number of characters doesn't matter) then follow the (Password Section) step below.
@@ -37,7 +37,7 @@ This is web application  is published already via [GitHub Pages](https://barsu54
 
 ## Login page
 #### Brief intro 
-- After following the above instructions(To run this application locally) and was successful ;
+- After following the above instructions(To run this application locally) and was successful 
 - For the username field input anything you wish. eg 'apple'
 - For password input anything you wish. eg '78tr3478gqe78b78bvyvbqbb5bvqebv7'
 - Click on login 
@@ -50,20 +50,21 @@ Image used was sourced from unsplash [Nick Chongnick604] (https://images.unsplas
 
 ## Suggestions & Contribution
 
-This is a project which I built, if you found this useful and want to use it, you can go ahead or you want to inspire development, you can reach out to me through my official email address provided below:
+This is a project which I built, if you found this useful and want to use it, you can go ahead or if you want to inspire development, you can reach out to me through my official email address provided below:
     [ebarulai@gmail.com]
 
 # Credits
 - Lead Developer - Emmanuel Barsulai [ebarsulai@gmail.com], Github>[https://github.com/Barsu5489]
-- Technical Mentor - Dennis Kiboi   
-## Copyright 2021, [Emmanuel Barsosio Barsulai]
+- Technical Mentor - Dennis Kiboi 
 
+## Copyright 2022
+[Emmanuel Barsosio Barsulai]
 # License
 The MIT License (MIT)
 Copyright (c) 2022 Emmanuel Barsosio Barsulai
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this [APP TYPE] and associated documentation files, to deal in the application without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the [APP TYPE], and to permit persons to whom the [APP TYPE] is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this [APP TYPE] and associated documentation files, to deal in the application without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the application, and to permit persons to whom the [APP TYPE] is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the application.
 
-THE [APP TYPE] IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE APPLICATION.
+THE application IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE APPLICATION.

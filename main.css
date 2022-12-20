@@ -100,12 +100,7 @@ nav ul li:hover{
     margin: auto;
     overflow: hidden;
 }
-/* .cotainer{
-    max-width: 1024px;
-    margin: auto;
-    overflow: hidden;
-    overflow-y: scroll;
-} */
+
 .imgDiv{
     display: flex;
 }
@@ -252,6 +247,7 @@ nav ul ul{
     position: absolute;
     width: 100%;
 }
+/* Making page responsive to devices */
 @media screen and (max-width: 500px) {
     .contain-form{
         margin: auto;
