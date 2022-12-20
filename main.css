@@ -65,8 +65,15 @@ nav{
     color: green;
     font-size: 28px;
 }
+.crypLogo:hover{
+cursor: pointer;
+color: blue;
+}
 .crypLogo span{
     color: blue;
+}
+.crypLogo span:hover{
+    color: green;
 }
 nav ul li{
     list-style-type: none;
