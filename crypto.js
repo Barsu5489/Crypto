@@ -18,39 +18,16 @@ const boddy = document.getElementById('body')
 const container = document.querySelector('.container');
 const coinContetnt = document.querySelector('.coinContent')
 const searchBar = document.getElementById('searchBar')
+let coinss = [];
 
 function fetchCoins() {
   fetch(url)
       .then(res => res.json())
       .then(coins => {
-          console.log(coins)
           renderCoins(coins)
 
       }, []);
 };
-
-
-let coinss = [];
-searchBar.addEventListener('keyup', (e) => {
-    const value = e.target.value.toLowerCase() 
-    console.log(coinss)
-
-    coinss.forEach(coin => {
-        console.log(coin.id)
-        console.log(coin.element)
-        const available = coin.id.includes(value) || coin.name.includes(value) 
-        if (available) {
-            coin.element.style.display = 'block'
-            coin.element.style.display = 'flex'
-        } else {
-            coin.element.style.display = 'none'
-        }
-
-
-    })
-
-})
-
 
 function renderCoins(coin) {
     //Coins table header content
@@ -95,7 +72,7 @@ function renderCoins(coin) {
 
         let priceChange = containerRow2.querySelector('.p2')
         priceChange.textContent = coin.price_change_24h
-        console.log(coin.price_change_24h)
+
         let totalVolume = containerRow2.querySelector('.p3')
         totalVolume.textContent = coin.total_volume
 
@@ -119,7 +96,6 @@ function renderCoins(coin) {
             if (abs == coin.id) {
                 coinDetails(abs)
             } else {
-                console.log('err')
             }
 
         })
@@ -154,13 +130,28 @@ function renderCoins(coin) {
        
     })
 }
+// Search implementation
+searchBar.addEventListener('keyup', (e) => {
+  const value = e.target.value.toLowerCase() 
 
+  coinss.forEach(coin => {
+      const available = coin.id.includes(value) || coin.name.includes(value) 
+      if (available) {
+          coin.element.style.display = 'block'
+          coin.element.style.display = 'flex'
+      } else {
+          coin.element.style.display = 'none'
+      }
+
+
+  })
+
+})
 
 function coinDetails(coinId) {
     fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             renderDetails(data)
 
         }, [])
@@ -176,11 +167,11 @@ function renderDetails(data) {
   
    
      <div class="content">
-         <h1>${data.name}</h1>  <span class = "spn"> <button id = "watchCoin"> Add to WatchList </button> </span>
+         <h1>${data.name}</h1>  <span class = "spn"> <button id = "watchCoin"> + Add to WatchList ➕ </button> </span>
      </div>
      <div class="content">
          <div class="rank">
-             <span class="rank-btn">Ranke: ${data.market_cap_rank}</span>
+             <span class="rank-btn">Rank @: ${data.market_cap_rank}</span>
          </div>
          <div class="info">
          <div class='coin-head'>
@@ -281,8 +272,7 @@ function renderDetails(data) {
             li.appendChild(btnRm)
             btnRm.addEventListener('click', () => {
                 li.remove()
-
-
+                alert('Coin Removed from WatcList')
             })
         }
         // Getting innerHTML content using
@@ -332,9 +322,7 @@ function fetching() {
             //Form desapears after login
             document.querySelector('.contain-form').style.display = 'none'
 
-        } else {
-            //show validation message
-            console.log('You are not logged in');
+        
         }
     })
 }
