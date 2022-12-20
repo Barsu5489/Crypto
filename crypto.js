@@ -9,7 +9,7 @@ const searchBar = document.getElementById('searchBar')
 
 console.log(coinDisply)
 let coinss = [];
-searchBar.addEventListener('input', (e)=>
+searchBar.addEventListener('keyup', (e)=>
   {
     const value = e.target.value.toLowerCase()
     console.log(coinss)
@@ -131,7 +131,7 @@ function renderDetails(data)
   
    
      <div class="content">
-         <h1>${data.name}</h1>  <span class = "spn ${data.name}"> <button> Add to WatchList </button> </span>
+         <h1>${data.name}</h1>  <span class = "spn ${data.name}"> <button id = "watchCoin"> Add to WatchList </button> </span>
      </div>
      <div class="content">
          <div class="rank">
@@ -181,7 +181,7 @@ function renderDetails(data)
   
   
      <div class="content2">
-         <h1>${data.name}</h1>  <span class = "spn ${data.name}"> 
+         <h1>${data.name}</h1>
      </div>
      <div class="content2">
          <div class="rank2">

@@ -25,7 +25,7 @@ This application is published to GitHub pages at the following location: https:/
 
 This is web application  is published already via [GitHub Pages](https://barsu5489.github.io/Crypto/).
 
-To run this application locally:
+## To run this application locally:
 - Use this link to clone into your local environment (https://github.com/Barsu5489/Crypto.git)
 - Run `git clone https://github.com/Barsu5489/Crypto.git` on your terminal - This will create a copy locally.
 - To navigate into the project while still on your terminal type `cd Crypto` (NOte: Letter`C` is in uppercase)
@@ -33,8 +33,15 @@ To run this application locally:
 - Right click on `index.js` File
 - Click on `Copy Path`
 - Open your favourite browser `Paste the copied path on address bar` then press enter
+- If you see a login page(username,password and button) that means it was succefull. - The instructions below will guide you to Canaan;
 
-
+## Login page
+#### Brief intro 
+- After following the above instructions(To run this application locally) and was successful ;
+- For the username field input anything you wish. eg 'apple'
+- For password input anything you wish. eg '78tr3478gqe78b78bvyvbqbb5bvqebv7'
+- Click on login 
+- Incase you experience an error check your network connection and try again.
 ## Acknowledgements
 Price and coin list are received from [coingecko API](https://www.coingecko.com/api/#).
 

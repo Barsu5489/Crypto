@@ -81,23 +81,6 @@ nav ul li:hover{
     background-color: red;
     border: 1px solid silver;
 }
-#watch{
-    position: absolute;
-    left: 55%;
-    top: 23.8%;
-    border: none;
-    background: green;
-    padding: 12px 30px;
-    border-radius: 30px;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-}
-:hover #watch{
-cursor: pointer;
-}
-
-
 
 /* Search Bar */
 #searchBar{
@@ -156,6 +139,20 @@ img{
     text-align: center;
     
 }
+/* Add to Watch list btn */
+#show button{
+    border: none;
+    background: green;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+#show button :hover{
+    cursor: pointer;
+    }
+
 /* Styling Watch list*/
 
 /* Specific coin */
