@@ -31,19 +31,28 @@ nav{
 .dropdown{
     overflow: hidden;
 }
+.dropdown:hover{
+    background-color: rgba(0, 0, 0, .2);
+}
+.dropdown li {
+    color: white;
+}
 .dropdown h4:hover{
     cursor: pointer;
     color: green;
 }
 .dropdown-content{
     display: none;
+    color: white;
 }
 .dropdown-content li:hover{
-    background-color: #ddd;
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
 }
+
 .dropdown-content li {
     float: none;
-    color: black;
+    color: white;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -234,4 +243,12 @@ li{
     font-size: larger;
     padding-left: 20px;
     padding-right: 20px;
+}
+/* This is to prevent the navbar from pushing content down*/
+nav ul li{
+    position: relative;
+}
+nav ul ul{
+    position: absolute;
+    width: 100%;
 }

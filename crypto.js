@@ -1,11 +1,34 @@
+ /* 
+  * fetcCoins - Function that gets coins from coingecko API
+  * renderCoins - Function that renders fetched coins to browser
+  * @ coin: parameter to represent the fetched coins data from coingecko API
+  * coinDetails - function to fetch detailed current data about all verified coins
+  * @ coinId: parameter to rpresent a specific coin.
+  * coinss - function that implements search my going through each array 
+  * renderDetails - Displays details about a coin depending on their id
+  * @data: Parameter to represent details about a specific coin
+  * fetching - Function that stores details of user in local storage during login
+  */
+
+
 const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=40&page=1&sparkline=false';
-const urlCoinDetails = 'https://api.coingecko.com/api/v3/coins/bitcoin'
 const coinTemplate = document.querySelector('[coin-template]')
 const coinDisply = document.querySelector('[kids]')
 const boddy = document.getElementById('body')
 const container = document.querySelector('.container');
 const coinContetnt = document.querySelector('.coinContent')
 const searchBar = document.getElementById('searchBar')
+
+function fetchCoins() {
+  fetch(url)
+      .then(res => res.json())
+      .then(coins => {
+          console.log(coins)
+          renderCoins(coins)
+
+      }, []);
+};
+
 
 let coinss = [];
 searchBar.addEventListener('keyup', (e) => {
@@ -27,16 +50,6 @@ searchBar.addEventListener('keyup', (e) => {
     })
 
 })
-
-function fetchCoins() {
-    fetch(url)
-        .then(res => res.json())
-        .then(coins => {
-            console.log(coins)
-            renderCoins(coins)
-
-        }, []);
-};
 
 
 function renderCoins(coin) {
@@ -111,7 +124,7 @@ function renderCoins(coin) {
 
         })
 
-        // Current Price
+        // Current Price (Using color to represent market status)
         if(currentPrize.textContent < 0 ){
           currentPrize.style.color = 'red';
         }
@@ -119,14 +132,14 @@ function renderCoins(coin) {
           currentPrize.style.color = 'green';
         }
 
-        //Total Volume
+        //Total Volume (Using color to represent market status)
         if(totalVolume.textContent < 0 ){
           totalVolume.style.color = 'red';
         }
         else {
           totalVolume.style.color = 'green';
         }
-        //priceChange
+        //Price Change in market (Using color to represent market status)
         if(priceChange.textContent < 0 ){
           priceChange.style.color = 'red';
         }
@@ -167,7 +180,7 @@ function renderDetails(data) {
      </div>
      <div class="content">
          <div class="rank">
-             <span class="rank-btn">Ranked @: ${data.market_cap_rank}</span>
+             <span class="rank-btn">Ranke: ${data.market_cap_rank}</span>
          </div>
          <div class="info">
          <div class='coin-head'>
@@ -271,8 +284,8 @@ function renderDetails(data) {
 
 
             })
-            console.log(data.name)
         }
+        // Getting innerHTML content using
         const addToWatchList1 = document.getElementById('show').childNodes[0].nextSibling
         addToWatchList1.innerHTML += `<div class="coin-container2" id ="container-content">
   
