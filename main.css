@@ -12,14 +12,6 @@
 }
 
 
-/* body {
-    background-image: url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-} */
-
 /* Nav Bar */
 .nav{
     background-color: rgba(0, 0, 0, .5);
@@ -33,6 +25,7 @@ nav{
     padding-right: 10%;
     overflow: hidden;
     color: white;
+    font-size:large
     
 }
 .dropdown{
@@ -40,7 +33,7 @@ nav{
 }
 .dropdown h4:hover{
     cursor: pointer;
-    color: blue;
+    color: green;
 }
 .dropdown-content{
     display: none;
@@ -58,7 +51,6 @@ nav{
 .dropdown:hover .dropdown-content {
     display: block;
     cursor: pointer;
-    color: blue;
   }
 .crypLogo{
     color: green;
@@ -73,7 +65,7 @@ nav ul li{
     padding: 10px 20px;
 }
 nav ul li:hover{
-    color: blue;
+    color:green;
     cursor: pointer;
 }
 .nav button{
@@ -112,15 +104,16 @@ nav ul li:hover{
     display: flex;
     border: 1px solid black;
     justify-content: space-between;
-    margin: 32px 16px;
-    padding: 12px 8px;
+    margin: 25px 16px;
+    padding: 8px 8px;
     align-items: center;
     background-color: rgba(0, 0, 0, .7);
-    color: red
+    color: white;
+    font-size: larger;
 }
 .header,.c-row:hover{
 cursor: pointer;
-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+border-bottom: 2px solid white;
 }
 img{
     height: 40px;
@@ -134,22 +127,26 @@ img{
 }
 .coin-container2 .content2{
     max-width: 500px;
-    border: 1px solid white;
     float:right;
     text-align: center;
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
     
+}
+.content2 p{
+    color: #4E9258;
 }
 /* Add to Watch list btn */
 #show button{
     border: none;
-    background: green;
+    background: rgb(33, 59, 33);
     padding: 12px 30px;
-    border-radius: 30px;
+    border-radius: 10px;
     color: white;
     font-weight: bold;
     font-size: 15px;
 }
-#show button :hover{
+#show #watchCoin:hover{
     cursor: pointer;
     }
 
@@ -158,7 +155,6 @@ img{
 /* Specific coin */
 .coin-container .content{
     max-width: 700px;
-    border: 1px solid white;
     display: flex;
     flex-direction: column; 
     text-align: center;
@@ -171,7 +167,8 @@ img{
     justify-content: space-between;
 }
 .rank{
-    background-color: red;
+    font-size: larger;
+    margin: 10px;
 }
 .img{
     height: 500px;
@@ -204,14 +201,27 @@ img{
     border: 1px solid silver;
     border-radius: 4px;
 }
+.contain-form form .inputs:hover{
+    cursor: pointer;
+    
+}
 #form{
     margin-top: 50px;
     background-color: rgba(0, 0, 0, .5);
-    color: white    ;
+    color: white ;
 }
 #loginButton{
     margin-left: 45%;
     padding: 15px 30px;
+    background-color:  green;
+    border: none;
+    border-radius: 5PX;
+    font-size: large;
+
+}
+#loginButton:hover{
+cursor: pointer;
+background-color: #72ca7e;
 }
 li{
     color: white;
@@ -219,4 +229,9 @@ li{
 
 #green{
     color: green;
+}
+#description{
+    font-size: larger;
+    padding-left: 20px;
+    padding-right: 20px;
 }
