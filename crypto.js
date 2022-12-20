@@ -211,7 +211,9 @@ function renderDetails(data) {
  <div class="coin-container2" id ="container-content">
   
  </div>
-` // section to change color depending on market level
+`
+document.getElementById('wl').style.display = 'block'
+// section to change color depending on market level
    let tr1 = document.getElementById('show').getElementsByTagName('td')[0].textContent
    if (tr1 < 0) {
       document.getElementById('show').getElementsByTagName('td')[0].style.color = 'red'
