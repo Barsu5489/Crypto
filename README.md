@@ -47,7 +47,7 @@ Price and coin list are received from [coingecko API](https://www.coingecko.com/
 
 Image used was sourced from unsplash [Nick Chongnick604] (https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
 
-
+Trading View for the widget used on the application (https://www.tradingview.com/widget/)
 ## Suggestions & Contribution
 
 This is a project which I built, if you found this useful and want to use it, you can go ahead or if you want to inspire development, you can reach out to me through my official email address provided below:
