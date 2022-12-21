@@ -17,9 +17,9 @@ This application is published to GitHub pages at the following location: https:/
 ## About the application and how to navigate
 - The application lists cryptocurrency coins from the highest rank in the market to the lowest and the list is updated if ranks change.
 - By clicking on any coin from the list you can view more details about.(CLick on any coin to view more details about it)
-- As a user youcan search for specific coin by typing letters associated with that coin and the system will filter it out fou you
-- After clicking on a coin from the list befor or after searching as a user you will see a green button that lets you add the coin to a watch list.
-- You can navigate back to coin list by clicking on search button on the navigation bar.
+- As a user you can search for specific coin by typing letters associated with that coin and the system will filter it out fou you
+- After clicking on a coin from the list before or after searching as a user you will see a green button that lets you add the coin to a watch list.
+- You can navigate back to coin list by clicking on home button on the navigation bar.
  
  ## Local Development
 
