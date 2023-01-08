@@ -1,9 +1,9 @@
 /* 
  * fetcCoins - Function that gets coins from coingecko API
  * renderCoins - Function that renders fetched coins to browser
- * @ coin: parameter to represent the fetched coins data from coingecko API
+ * @coin: parameter to represent the fetched coins data from coingecko API
  * coinDetails - function to fetch detailed current data about all verified coins
- * @ coinId: parameter to rpresent a specific coin.
+ * @coinId: parameter to rpresent a specific coin.
  * coinss - function that implements search my going through each array 
  * renderDetails - Displays details about a coin depending on their id
  * @data: Parameter to represent details about a specific coin
@@ -94,7 +94,7 @@ function renderCoins(coin) {
 
          if (abs == coin.id) {
             coinDetails(abs)
-         } else {}
+         }
 
       })
 
