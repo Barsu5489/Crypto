@@ -1,5 +1,5 @@
 # CRYPTO WEB APPLICATION
-QuickMarks is Cryptocurrency web application. The objective of the application is ease of use. Users can easyily get information about cryptocurrencies, their rank in the market to indepth information about those specific coins all in one place.
+CRYPTO INFO is Cryptocurrency web application. The objective of the application is ease of use. Users can easyily get information about cryptocurrencies, their rank in the market to indepth information about those specific coins all in one place.
 # Info
 This application is published to GitHub pages at the following location: https://barsu5489.github.io/Crypto/
 
