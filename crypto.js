@@ -324,7 +324,7 @@ function fetching() {
    })
 }
 document.addEventListener('DOMContentLoaded', () => {
-
+alert('input any username and passowrd then click login')
    fetching()
    document.querySelector('.homePage').addEventListener('click', () => {
       container.style.display = 'block'
